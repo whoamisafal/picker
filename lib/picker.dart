@@ -1,4 +1,4 @@
-library picker;
+library cpicker;
 
 import 'package:flutter/material.dart';
 
@@ -49,6 +49,8 @@ class _ColorPickerState extends State<ColorPicker> {
         width: MediaQuery.of(context).size.width,
         height: widget.height != null ? widget.height : 250,
         child: GridView.builder(
+          itemCount: widget.colors.length,
+          shrinkWrap: true,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 5,
             crossAxisSpacing: 2,
